@@ -9,18 +9,24 @@ class MarkdownInput extends React.Component {
   render() {
     const textAreaStyle = {
       width: '100%',
-      minHeight: '50vh'
+      height: '100%'
     };
 
     return (
-      <textarea id={this.props.id} style={textAreaStyle}></textarea>
+      <textarea
+        id={this.props.id}
+        value={this.props.value}
+        onChange={this.props.onUserInput}
+        style={textAreaStyle} />
     );
   }
 }
 
 // Prop types
 MarkdownInput.propTypes = {
-  id: PropTypes.any
+  id: PropTypes.any,
+  onUserInput: PropTypes.func,
+  value: PropTypes.string
 };
 
 export default MarkdownInput;
