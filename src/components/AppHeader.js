@@ -45,7 +45,7 @@ class AppHeader extends React.Component {
         <h1>{data.projectName}</h1>
         <p>
           Hi ! Welcome to the {data.projectName} !<br/>
-          This is a project #1 Free Code Camp's "Front End Libraries" certification.<br/>
+          This is a project #2 Free Code Camp's "Front End Libraries" certification.<br/>
         </p>
         {this.renderLinks()}
       </div>
