@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import AppHeader from './components/AppHeader';
+import MarkdownInput from './components/MarkdownInput';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="bg-light" style={{minHeight: '100vh'}}>
+      <Row>
+        <Col md={6}>
+          <AppHeader />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <MarkdownInput id="editor" />
+        </Col>
+        <Col>
+          CONTENT HERE
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
